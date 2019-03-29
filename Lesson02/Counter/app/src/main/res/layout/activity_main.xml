@@ -19,10 +19,17 @@
 
     <Button
         android:onClick="increment"
-        android:id="@+id/button"
+        android:id="@+id/btnIncrement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Count" />
+        android:text="Increment" />
+
+    <Button
+        android:id="@+id/btnDecrement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrement"
+        android:onClick="decrement"/>
 
 </LinearLayout>

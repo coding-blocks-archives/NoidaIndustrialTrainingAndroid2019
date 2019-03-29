@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<com.codingblocks.calculator.RedColoredTextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:text="sudfghdsbfhdk"-->
+        <!--android:textSize="32sp"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="0"
+        android:textSize="32sp" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCount"
+        android:layout_centerHorizontal="true"
+        android:text="Reset" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCount"
+        android:layout_toLeftOf="@id/btnReset"
+        android:text="Decrement" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCount"
+        android:layout_toRightOf="@id/btnReset"
+        android:text="Increment" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The current count is"
+        android:textSize="32sp"
+        android:layout_above="@id/tvCount"
+        android:gravity="center"/>
+
+
+</android.widget.RelativeLayout>

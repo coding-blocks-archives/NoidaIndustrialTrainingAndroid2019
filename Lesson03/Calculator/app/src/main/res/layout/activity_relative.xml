@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff76f"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        android:textSize="32sp" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Harshit"
+        android:textSize="32sp" />
+
+    <!--layout_gravity affects how the TextView is placed-->
+    <!--gravity affects how the content inside of the TextView is placed-->
+
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#efefef"
+        android:text="Hello"
+        android:textSize="32sp" />
+
+    <!--<include layout="@layout/activity_frame" />-->
+
+    <Button
+        android:id="@+id/btnNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:layout_below="@id/tvHello"
+        android:layout_toLeftOf="@id/tvHello"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I'm the new text!"
+        android:textSize="28sp"
+        android:layout_above="@id/tvHello"
+        android:layout_toLeftOf="@id/btnNew"/>
+
+</RelativeLayout>

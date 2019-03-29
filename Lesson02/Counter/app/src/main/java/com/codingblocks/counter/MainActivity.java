@@ -19,13 +19,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
     public void increment(View view) {
         count++;
         Log.e(TAG, "" + count);
         //Set the count to the text
+        updateViews(count);
+    }
+
+    public void decrement(View view) {
+        if (count < 0)
+            count = 0;
+        else
+            count--;
+        updateViews(count);
+    }
+
+    public void updateViews(int count) {
         TextView counterText = findViewById(R.id.countTextView);
         counterText.setText("" + count);
-
     }
+
 }
