@@ -1,6 +1,7 @@
 package com.codingblocks.listviewcustomadapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +60,8 @@ public class PersonAdapter extends BaseAdapter {
 
         Person currentPerson = getItem(position);
 
+        Log.e("TAG", "" + convertView);
+
 
 //        LayoutInflater li = (LayoutInflater)
 //                ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -76,17 +79,22 @@ public class PersonAdapter extends BaseAdapter {
 //
 //        }
 
-        //The second parameter is the parent
-        //viewgroup which will provide the inflated view with its width and height
+        View inflatedView;
 
-        //The third parameter specifies if you want to add the inflated layout to your parent viewgroup or not.
-        //If false, the view isn't added; else it is added.
-        //For BaseAdapter,this will always be false because the view returned by getView()
-        //is added to the parent automatically by the BaseAdapter
+        if (convertView == null){
+            //The second parameter is the parent
+            //viewgroup which will provide the inflated view with its width and height
 
-        View inflatedView = li.inflate(R.layout.item_row,
-                parent,
-                false);
+            //The third parameter specifies if you want to add the inflated layout to your parent viewgroup or not.
+            //If false, the view isn't added; else it is added.
+            //For BaseAdapter,this will always be false because the view returned by getView()
+            //is added to the parent automatically by the BaseAdapter
+            inflatedView = li.inflate(R.layout.item_row,
+                    parent,
+                    false);
+        }
+        else
+            inflatedView = convertView;
 
         ImageView ivProfile = inflatedView.findViewById(R.id.ivProfilePic);
         TextView tvName = inflatedView.findViewById(R.id.tvName);
