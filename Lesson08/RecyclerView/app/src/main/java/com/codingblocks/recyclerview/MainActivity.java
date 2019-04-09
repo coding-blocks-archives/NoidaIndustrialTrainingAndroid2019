@@ -15,6 +15,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    //https://guides.codepath.com/android/Heterogenous-Layouts-inside-RecyclerView
+
     ArrayList<Note> notesList = new ArrayList<>();
     EditText etTitle;
 
