@@ -40,6 +40,7 @@ public class NoteAdapter extends BaseAdapter {
     }
 
     //This class stores the views that have been found already
+    //This is enforced by default in the RecyclerView Adapter
     class ViewHolder {
         private TextView tvTitle, tvTime;
 
@@ -54,6 +55,7 @@ public class NoteAdapter extends BaseAdapter {
         final Note currentNote = notes.get(position);
         View inflatedView;
 
+        //This is your onCreateViewHolder in the RecyclerView
         if (convertView == null) {
             inflatedView = li.inflate(R.layout.item_note, parent, false);
             ViewHolder viewHolder = new ViewHolder(inflatedView);
@@ -62,6 +64,8 @@ public class NoteAdapter extends BaseAdapter {
             inflatedView = convertView;
         }
 
+
+        //This is the onBindViewHolder in your RecyclerView
         ViewHolder viewHolder = (ViewHolder) inflatedView.getTag();
         viewHolder.tvTime.setText(currentNote.getTime());
         viewHolder.tvTitle.setText(currentNote.getTitle());
