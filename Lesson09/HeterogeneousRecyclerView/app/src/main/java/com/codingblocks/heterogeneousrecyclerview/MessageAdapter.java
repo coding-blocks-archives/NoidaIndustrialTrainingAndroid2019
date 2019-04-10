@@ -13,7 +13,6 @@ import java.util.ArrayList;
 
 public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-
     private ArrayList<WhatsappMessage> messages;
     private Context context;
 
@@ -82,6 +81,11 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             case 2:
                 ImageSentHolder imageSentHolder = (ImageSentHolder) viewHolder;
                 imageSentHolder.tvTime.setText(currentMessage.getTime());
+                break;
+            case 3:
+                ImageReceivedHolder imageReceivedHolder = (ImageReceivedHolder) viewHolder;
+                imageReceivedHolder.tvTime.setText(currentMessage.getTime());
+                break;
         }
 
     }
