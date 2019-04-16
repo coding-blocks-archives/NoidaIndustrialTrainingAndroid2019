@@ -45,12 +45,13 @@ class MainActivity : AppCompatActivity() {
                     val result = responseBody!!.string()
                     val gson = Gson()
 
+                    //::class keyword takes the compiled name of the class
                     val root = gson.fromJson(result, Root::class.java)
 
                     runOnUiThread {
 
                         //Using GSON, you can send complex java objects across activities easily
-//                        val intent = Intent()
+//                        val intent = Intent(baseContext,MainActivity::class.java)
 //                        val stringifiedRoot = gson.toJson(root)
 //                        intent.putExtra("KEY",stringifiedRoot)
 
