@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.codingblocks.okhttpgson.MainActivity">
+
+    <EditText
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the Pokemon's rank here"
+            android:id="@+id/etPokeRank"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/btnSearch"
+            android:text="Search"/>
+
+    <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:id="@+id/ivPokemon"
+            android:layout_gravity="center"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/tvPokemonName"
+              android:layout_gravity="center"
+              android:textSize="32sp"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/tvPokemonWeight"
+              android:textSize="24sp"
+              android:layout_gravity="center"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/tvPokemonRank"
+              android:textSize="24sp"
+              android:layout_gravity="center"/>
+
+</LinearLayout>
