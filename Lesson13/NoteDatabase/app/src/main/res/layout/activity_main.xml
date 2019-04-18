@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    <android.support.v7.widget.RecyclerView
+    <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/rvNotes"/>
+            tools:context=".MainActivity">
 
-    <!--Use app:srcCompat to support vector graphics on old android versions-->
-    <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fabAdd"
-            app:fabSize="normal"
-            app:srcCompat="@drawable/ic_add"
-            android:layout_margin="16dp"
-            android:layout_gravity="bottom|end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rvNotes"/>
 
-</FrameLayout>
+        <!--Use app:srcCompat to support vector graphics on old android versions-->
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabAdd"
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ic_add"
+                android:layout_margin="16dp"
+                android:layout_gravity="bottom|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

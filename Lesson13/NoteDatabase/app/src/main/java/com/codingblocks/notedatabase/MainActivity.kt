@@ -24,6 +24,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        swipeToRefresh.setOnRefreshListener {
+//
+//            swipeToRefresh.isRefreshing = false
+//
+//        }
+
         fabAdd.setOnClickListener {
             showCustomAlert()
         }
