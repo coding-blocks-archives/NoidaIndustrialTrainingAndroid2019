@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Settings"
+          android:id="@+id/menu_settings"
+          app:showAsAction="ifRoom"
+          android:icon="@drawable/ic_settings">
+    </item>
+
+    <item android:title="About"
+          android:id="@+id/menu_about"
+          app:showAsAction="ifRoom"
+          android:icon="@drawable/ic_about">
+    </item>
+
+    <item android:title="Help"
+          android:id="@+id/menu_help"
+          app:showAsAction="never"
+          android:icon="@drawable/ic_help">
+
+    </item>
+
+    <!--Nesting of menus-->
+    <item android:title="More"
+          android:id="@+id/menu_more">
+        <menu>
+            <item android:id="@+id/create_new"
+                  android:title="Create New"/>
+            <item android:id="@+id/open"
+                  android:title="Open"/>
+        </menu>
+    </item>
+
+
+</menu>
