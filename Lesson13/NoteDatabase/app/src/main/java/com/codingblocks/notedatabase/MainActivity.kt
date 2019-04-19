@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.annotation.Keep
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.view_dialog.view.*
 
@@ -29,6 +30,21 @@ class MainActivity : AppCompatActivity() {
 //            swipeToRefresh.isRefreshing = false
 //
 //        }
+//
+//        notifyDatasetChanged()
+//        notifyItemInserted(position)
+//        notifyItemRemoved(position)
+
+        rvNotes.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+
+            }
+
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+            }
+        })
 
         fabAdd.setOnClickListener {
             showCustomAlert()

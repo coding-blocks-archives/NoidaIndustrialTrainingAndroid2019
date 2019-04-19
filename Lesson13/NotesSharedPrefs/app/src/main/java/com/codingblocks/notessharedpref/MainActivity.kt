@@ -33,6 +33,12 @@ class MainActivity : AppCompatActivity() {
             .putBoolean("BOOL",true)
             .putInt("COUNT",5)
             .apply()
+
+        sharedPreferences.edit()
+            .remove("abc")
+            .apply()
+
+        //Start intent for the login activity
     }
 
     override fun onStart() {

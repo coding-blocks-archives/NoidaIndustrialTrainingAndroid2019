@@ -1,8 +1,10 @@
 package com.codingblocks.okhttpgson
 
+import com.google.gson.annotations.SerializedName
+
 class Root(
     val abilities: ArrayList<Ability>,
-    val base_experience: Int,
+    @SerializedName("base_experience") val baseExperience: Int,
     val forms: ArrayList<Form>,
     val game_indices: ArrayList<GameIndex>,
     val height: Double,
