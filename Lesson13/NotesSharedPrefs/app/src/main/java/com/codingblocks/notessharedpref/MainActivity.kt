@@ -22,6 +22,17 @@ class MainActivity : AppCompatActivity() {
         btnAddNote.setOnClickListener {
             showComplexAlert()
         }
+
+        val result = sharedPreferences.getString(
+            "KEY",
+            "KEY NOT FOUND!"
+        )
+
+        sharedPreferences.edit()
+            .putString("KEY", "KEY EXISTS")
+            .putBoolean("BOOL",true)
+            .putInt("COUNT",5)
+            .apply()
     }
 
     override fun onStart() {
