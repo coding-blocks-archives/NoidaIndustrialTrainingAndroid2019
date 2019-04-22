@@ -1,4 +1,4 @@
-package com.codingblocks.notesdatabase
+package com.codingblocks.notesdatabase.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

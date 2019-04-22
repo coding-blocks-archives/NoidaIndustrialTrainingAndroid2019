@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import com.codingblocks.notesdatabase.db.Note
+import com.codingblocks.notesdatabase.db.NoteDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_dialog.view.*
 

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NotesFirebase</string>
+    <string name="enter_the_title_here">Title here</string>
+    <string name="enter_the_description_here">Description here</string>
+</resources>

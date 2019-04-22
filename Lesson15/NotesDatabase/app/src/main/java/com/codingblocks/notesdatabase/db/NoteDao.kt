@@ -1,4 +1,4 @@
-package com.codingblocks.notesdatabase
+package com.codingblocks.notesdatabase.db
 
 import androidx.room.*
 
@@ -11,8 +11,8 @@ interface NoteDao {
     @Query("SELECT * FROM note ORDER BY id DESC LIMIT :n")
     fun getLastNNotes(n: Int): List<Note>
 
-    @Query("SELECT * FROM note WHERE id = :id")
-    fun getNoteWithId(id: Long): Note
+    @Query("SELECT * FROM note WHERE id = :xyz")
+    fun getNoteWithId(xyz: Long): Note
 
     @Update
     fun updateNote(note: Note)
