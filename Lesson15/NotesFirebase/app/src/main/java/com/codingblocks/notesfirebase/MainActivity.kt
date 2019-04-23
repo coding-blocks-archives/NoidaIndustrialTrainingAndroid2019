@@ -6,10 +6,7 @@ import android.provider.ContactsContract
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.codingblocks.notesdatabase.NoteAdapter
-import com.google.firebase.database.ChildEventListener
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_dialog.view.*
 
@@ -90,6 +87,38 @@ class MainActivity : AppCompatActivity() {
                 }
             })
 
+        //This is not realtime, only gives you the data snapshot
+        // once the listener is attached
+        FirebaseDatabase.getInstance()
+            .reference
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(p0: DataSnapshot) {
+
+                }
+
+                override fun onCancelled(p0: DatabaseError) {
+
+                }
+
+            })
+
+        FirebaseDatabase.getInstance()
+            .reference
+            .child("test")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onCancelled(dbErr: DatabaseError) {
+
+                }
+
+                override fun onDataChange(ds: DataSnapshot) {
+                    ds.children.forEach {
+                        val note = it.getValue(Note::class.java)
+                    }
+
+//                    FirebaseDatabase.getInstance().reference.removeEventListener(this)
+                }
+
+            })
     }
 
     private fun saveNoteToFirebaseDatabase(note: Note) {
